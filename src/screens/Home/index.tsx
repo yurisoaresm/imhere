@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Participant } from '../../components/Participant';
 
@@ -56,7 +57,7 @@ export function Home() {
 
         <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
           <Text style={styles.buttonText}>
-            +
+            <Icon name="person-add-outline" size={24} color='#fdfcfe' />
           </Text>
         </TouchableOpacity>
       </View>

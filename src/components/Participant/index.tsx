@@ -1,4 +1,5 @@
 import { View, Text, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { styles } from './styles';
 
@@ -15,9 +16,7 @@ export function Participant({ name, onRemove }: Props) {
       </Text>
 
       <TouchableOpacity style={styles.button} onPress={onRemove} >
-          <Text style={styles.buttonText}>
-            -
-          </Text>
+            <Icon name="trash-outline" size={24} color='#fdfcfe' />
         </TouchableOpacity>
     </View>
   );

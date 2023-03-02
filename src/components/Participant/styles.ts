@@ -15,10 +15,6 @@ export const styles = StyleSheet.create({
     color: '#fdfcfe',
     marginLeft: 16, 
   },
-  buttonText: {
-    color: '#fdfcfe',
-    fontSize: 24,
-  },
   button: {
     width: 56,
     height: 56,
