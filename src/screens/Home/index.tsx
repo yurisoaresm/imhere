@@ -22,7 +22,10 @@ export function Home() {
     Alert.alert('Remover', `Deseja remover ${name} da lista de participantes?`, [
       {
         text: 'Sim',
-        onPress: () => Alert.alert('Participante removido', `O participante foi removido com sucesso!`)
+        onPress: () => {
+          setParticipants(prevState => prevState.filter(participant => participant != name));
+          Alert.alert('Participante removido', `${name} foi removido da sua lista`);
+        }
       },
       {
         text: 'Não',
@@ -30,7 +33,7 @@ export function Home() {
       }
     ])
 
-    setParticipants(prevState => prevState.filter(participant => participant != name));
+    
   }
 
   return (
