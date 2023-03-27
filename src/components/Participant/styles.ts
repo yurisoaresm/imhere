@@ -3,8 +3,9 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   conatiner: {
     width: '100%',
-    backgroundColor: '#1f1e25',
-    borderRadius: 5,
+    backgroundColor: '#252F40',
+    borderTopLeftRadius: 7,
+    borderBottomLeftRadius: 7,
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
@@ -18,8 +19,9 @@ export const styles = StyleSheet.create({
   button: {
     width: 56,
     height: 56,
-    borderRadius: 7,
-    backgroundColor: '#e23c44',
+    borderTopRightRadius: 7,
+    borderBottomRightRadius: 7,
+    backgroundColor: '#252F40',
     alignItems: 'center',
     justifyContent: 'center',
   },

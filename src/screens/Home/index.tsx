@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Feather } from '@expo/vector-icons'; 
 
 import { Participant } from '../../components/Participant';
 
@@ -39,46 +40,52 @@ export function Home() {
 
   return (
     <View style={styles.container}> 
-      <Text style={styles.eventName}>
-        Nome do evento
-      </Text>
-      <Text style={styles.eventDate}>
-        Quarta, 1 de Março de 2023
-      </Text>
-
-      <View style={styles.form}>
-        <TextInput
-          style={styles.input}
-          placeholder='Nome do participante'
-          placeholderTextColor='#6b6b6b'
-          onChangeText={setParticipantName}
-          value={participantName}
-        />
-
-        <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
-          <Text style={styles.buttonText}>
-            <Icon name="person-add-outline" size={24} color='#fdfcfe' />
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <FlatList 
-        data={participants}
-        keyExtractor={item => item}
-        renderItem={({ item }) => (
-          <Participant
-            key={item}
-            name={item}
-            onRemove={() => handleParticipantRemove(item)}
+      <LinearGradient 
+        colors={['#204073', '#0F1C33']} 
+        start={{ x: 0, y: 0 }} 
+        end={{ x: 0, y: 1}} 
+        style={styles.headerContainer}
+      >
+        <Text style={styles.eventName}>
+          Nome do evento
+        </Text>
+        <Text style={styles.eventDate}>
+          Quarta, 1 de Março de 2023
+        </Text>
+        <View style={styles.form}>
+          <TextInput
+            style={styles.input}
+            placeholder='Nome do participante'
+            placeholderTextColor='#6b6b6b'
+            onChangeText={setParticipantName}
+            value={participantName}
           />
-        )}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={() => (
-          <Text style={styles.listEmptyText}>
-            Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
-          </Text>
-        )}
-      />
+
+          <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+            <Feather name="user-plus" size={24} color="#458AF7" />
+          </TouchableOpacity>
+        </View>
+      </LinearGradient>
+      
+      <View style={styles.content}>
+        <FlatList
+          data={participants}
+          keyExtractor={item => item}
+          renderItem={({ item }) => (
+            <Participant
+              key={item}
+              name={item}
+              onRemove={() => handleParticipantRemove(item)}
+            />
+          )}
+          showsVerticalScrollIndicator={false}
+          ListEmptyComponent={() => (
+            <Text style={styles.listEmptyText}>
+              Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
+            </Text>
+          )}
+        />
+      </View>
     </View>
   )
 }
