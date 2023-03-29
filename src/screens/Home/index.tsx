@@ -15,6 +15,10 @@ export function Home() {
     if (participants.includes(participantName)) {
       return Alert.alert('Participante Presente', 'Já existe um participante com esse nome na lista.');
     }
+    
+    if (!participantName) { 
+      return Alert.alert('Nome Vazio', 'Por favor, digite um nome para o participante.');
+    }
 
     setParticipants(prevState => [...prevState, participantName]);
     setParticipantName('');
