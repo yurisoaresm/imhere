@@ -34,38 +34,38 @@ export function Home() {
         style: 'cancel'
       }
     ])
-
     
   }
 
   return (
     <View style={styles.container}> 
-      <LinearGradient 
-        colors={['#204073', '#0F1C33']} 
-        start={{ x: 0, y: 0 }} 
-        end={{ x: 0, y: 1}} 
-        style={styles.headerContainer}
-      >
-        <Text style={styles.eventName}>
-          Nome do evento
-        </Text>
-        <Text style={styles.eventDate}>
-          Quarta, 1 de Março de 2023
-        </Text>
-        <View style={styles.form}>
-          <TextInput
-            style={styles.input}
-            placeholder='Nome do participante'
-            placeholderTextColor='#6b6b6b'
-            onChangeText={setParticipantName}
-            value={participantName}
-          />
-
-          <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
-            <Feather name="user-plus" size={24} color="#458AF7" />
-          </TouchableOpacity>
-        </View>
-      </LinearGradient>
+      <View style={styles.headerContainer}>
+        <LinearGradient
+          colors={['#204073', '#0F1C33']}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 0, y: 1}}
+          style={styles.headerGradient}
+        >
+          <Text style={styles.eventName}>
+            Nome do evento
+          </Text>
+          <Text style={styles.eventDate}>
+            Quarta, 1 de Março de 2023
+          </Text>
+          <View style={styles.form}>
+            <TextInput
+              style={styles.input}
+              placeholder='Nome do participante'
+              placeholderTextColor='#6b6b6b'
+              onChangeText={setParticipantName}
+              value={participantName}
+            />
+            <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+              <Feather name="user-plus" size={24} color="#458AF7" />
+            </TouchableOpacity>
+          </View>
+        </LinearGradient>
+      </View>
       
       <View style={styles.content}>
         <FlatList

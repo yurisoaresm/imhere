@@ -8,12 +8,33 @@ export const styles = StyleSheet.create({
   headerContainer: {
     height: 239,
     width: '100%',
+    borderBottomRightRadius: 24,
+    borderBottomLeftRadius: 24,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+
+    elevation: 11,
+  },
+  headerGradient: {
+    height: '96%' ,
+    width: '100%',
     paddingHorizontal: 24,
     borderBottomRightRadius: 24,
     borderBottomLeftRadius: 24,
-    shadowOffset: {height: 9, width: 0},
-    shadowRadius: 15,
-    shadowColor: '#000',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+
+    elevation: 11,
   },
   eventName: {
     color: '#fdfcfe',
