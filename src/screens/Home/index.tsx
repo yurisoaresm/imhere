@@ -60,9 +60,11 @@ export function Home() {
               onChangeText={setParticipantName}
               value={participantName}
             />
-            <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
-              <Feather name="user-plus" size={24} color="#458AF7" />
-            </TouchableOpacity>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
+                <Feather name="user-plus" size={24} color="#458AF7" />
+              </TouchableOpacity>
+            </View>
           </View>
         </LinearGradient>
       </View>

@@ -57,11 +57,16 @@ export const styles = StyleSheet.create({
     marginRight: 0,
     fontSize: 16,
   },
-  button: {
+  buttonContainer: {
     width: 56,
     height: 56,
     borderTopRightRadius: 7,
     borderBottomRightRadius: 7,
+    backgroundColor: '#252F40',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
     backgroundColor: '#252F40',
     alignItems: 'center',
     justifyContent: 'center',
