@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   conatiner: {
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     color: '#fdfcfe',
-    marginLeft: 16, 
+    marginLeft: 16,
   },
   button: {
     width: 56,
